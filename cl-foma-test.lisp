@@ -1,4 +1,4 @@
-(in-package :cl-fst)
+(in-package :cl-foma)
 
 #+test
 (print (libcfsm-version))
@@ -24,7 +24,7 @@
   (defparameter *net* (load-net1 cstr *fst-cntxt*)))
 
 #+test
-(defparameter *net* (load-net "/Users/paul/lisp/projects/xle/grammars/kartuli/kartuli-morph.fst" *fst-cntxt*))
+(defparameter *net* (load-net "/home/paul/quicklisp/local-projects/georgian-morph/regex/georgian-morph-ng.foma" *fst-cntxt*))
 
 #+test
 (defparameter *net* (load-net "/Users/paul/fst/cfsm_api/src/apply/test/FrenchEnglish.fst" *fst-cntxt*))
