@@ -26,7 +26,7 @@
 (defmethod initialize-instance :after ((net fst-net) &key &allow-other-keys)
   (with-slots (foma-file net-ptr applyer) net
     (setf net-ptr (fsm-read-binary-file (namestring (translate-logical-pathname foma-file))))
-    (assert (not (null-pointer-p net-ptr)) nil "Could not find ~a" foma-file)
+    (assert (not (null-pointer-p net-ptr)) nil "Could not find file ‘~a’" foma-file)
     (setf applyer (apply-init net-ptr))))
 
 (defun apply-to-string (string applyer side)
